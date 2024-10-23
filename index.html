@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Обучающий сайт для детей</title>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet">
+    <style>
+        /* Общие стили */
+        body {
+            font-family: 'Comfortaa', sans-serif; /* Шрифт */
+            background: linear-gradient(to right, #f7f8f8, #d8d8d7); /* Цвет фона */
+            margin: 0;
+            padding: 0;
+            text-align: center; /* Центрирование текста */
+        }
+        
+        header {
+            position:absolute;
+            display:flex;
+            width:100%;
+            z-index:10;
+            justify-content:end;
+			background-color: rgba(98, 149, 127, 0.4);
+        }
+        
+        .header-content {
+            padding:20px;
+        }
+
+        .button {
+			font-family: 'Comfortaa', sans-serif;
+            background-color: #d9b03b; /* Цвет кнопки */
+            color: white; /* Цвет текста кнопки */
+            border: none; /* Без границ */
+            font-size: 16px; /* Размер текста кнопки */
+            cursor: pointer; /* Указатель курсора */
+            border-radius: 10px; /* Закругленные углы */
+			font-weight: 500;
+            padding:15px;
+        }
+		
+		.try-btn {
+			color: white;
+		}
+
+		
+        /* Стили для секции с фоновым изображением */
+        .main-section {
+            background-image: url('pic/background.png'); /* Фоновое изображение */
+            background-size: cover; /* Растягиваем по горизонтали */
+            background-position: center; /* Центрируем фоновое изображение */
+            height: 100vh; /* Высота секции */
+            position: relative; /* Относительное позиционирование */
+            margin: 0;
+        }
+
+        .container {
+            padding-top:80px;
+        }
+
+        .content h1 {
+            color: #fffdfe; /* Цвет заголовка */
+            max-width: 1500px; /* Максимальная ширина заголовка */
+            font-size: 60px; /* Размер заголовка */
+            margin: 0 auto; /* Центрируем заголовок */
+            text-align: center; /* Центрируем текст */
+            padding-top: 50px;
+        }
+
+        .content p {
+            color: #fff; /* Белый цвет текста */
+            font-size: 20px; /* Размер текста */
+            text-align: center; /* Центрирование текста */
+            max-width: 800px; /* Максимальная ширина абзаца */
+            margin: 0 auto; /* Центрирование абзаца */
+        }
+		p {
+			margin: 5px 0;
+			font-size: 16px;
+		}
+        
+        .icons {
+            width: 100%;    
+        }
+		
+		.quote {
+			height: 150px;
+			margin-top: 150px;
+			font-size: 27px;			
+		}
+		
+
+        .icons-content {
+            display: flex;
+            flex-wrap: wrap; /* Позволяем элементам переноситься на новую строку */
+            justify-content: space-evenly;
+            gap: 40px;
+            margin: 50px 100px;
+        }
+
+        .icon-section {
+            flex: 1 1 calc(50% - 80px); /* Устанавливаем ширину секции */
+            box-sizing: border-box; /* Учитываем отступы в ширину */
+            margin-bottom: 40px; /* Отступ снизу между рядами */
+			background-repeat: no-repeat;
+        }
+
+        /* Текст для секций */
+        .icon-section-text {
+            color: #fdfdfd; /* Цвет текста */
+			font-weight: bold; /* Жирный текст */
+            font-size: 18px; /* Размер текста */
+			margin-left: 13px;
+			text-align: left;
+			text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6); /* Добавление тени к тексту */
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between; /* Разделяем текст и кнопку */
+			height: calc(100% - 85px);
+			padding-top: 33px;
+			width:100%;
+        }
+        
+        .icon-section {         
+            border-radius: 40px;
+			background-color: rgba(216, 216, 215, 0.3); /* Полупрозрачный цвет */
+			background-image: url('your-image-url.jpg');
+			background-blend-mode: overlay; /* Наложение цветов */
+			min-width: 535px;
+			background-size: cover;
+			width: 700px;
+        }
+        
+        .icon-section-1 {
+			background-image: url('pic/backic.png'); /* Фоновое изображение */
+            box-shadow: -3px 3px 10px rgba(0, 0, 0, 0.3), /* Тень */
+                        inset 0 0 20px rgba(255, 255, 255, 0.0); /* Внутреннее свечение */
+			background-position: 0% 30%; /* Центрировать по умолчанию */			
+			}
+			
+		.icon-section-2 {
+			background-image: url('pic/backic2.png'); /* Фоновое изображение */
+            box-shadow: -3px 3px 10px rgba(0, 0, 0, 0.3), /* Тень */
+                        inset 0 0 20px rgba(255, 255, 255, 0.0); /* Внутреннее свечение */
+			background-position: 0% 0%; /* Центрировать по умолчанию */
+			background-position: 75% 15%; /* Центрировать по умолчанию */
+			}
+			
+		.icon-section-3 {
+			background-image: url('pic/backic3.png'); /* Фоновое изображение */
+            box-shadow: -3px 3px 10px rgba(0, 0, 0, 0.3), /* Тень */
+                        inset 0 0 20px rgba(255, 255, 255, 0.0); /* Внутреннее свечение */
+			background-position: 46% 15%; /* Центрировать по умолчанию */	
+			}
+			
+		.icon-section-4 {
+			background-image: url('pic/backic4.png'); /* Фоновое изображение */
+            box-shadow: -3px 3px 10px rgba(0, 0, 0, 0.3), /* Тень */
+                        inset 0 0 20px rgba(255, 255, 255, 0.0); /* Внутреннее свечение */
+			background-position: 0% 50%; /* Центрировать по умолчанию */	
+			}
+
+
+        .icon img {
+            max-width: 150px; /* Ограничение максимальной ширины до 150px */
+            height: auto; /* Высота сохраняет пропорции */
+            border-radius: 20px; /* Закругление углов */
+            margin-right: 20px; /* Отступы справа между иконкой и текстом */
+        }
+        
+        .icon-section-content {
+            display: flex;
+            flex-direction: row; /* Выстраиваем иконку и текст в строку */
+            justify-content: flex-start; /* Выравниваем элементы влево */
+            align-items: flex-start; /* Выравниваем элементы по верхнему краю */
+            padding: 20px 30px 20px 20px;
+			height:100%;
+        }
+		
+		.icon-section-text h2 {
+			margin: 0 0 15px 0;
+		}
+        
+		.icon-section-text h3 {
+			margin: 8px 0 10px 0;
+		}
+		
+		.icon-section-button-cnt {
+			display: flex;    
+			justify-content: end;
+			
+		}
+		
+	
+		/* Общие стили */
+		.main-section h1 {
+			font-size: 60px; /* Начальный размер заголовка */
+		}
+
+		.main-section p {
+			font-size: 20px; /* Начальный размер текста */
+		}
+		
+		.site-footer {
+        background-color: #86bba9;  /* Фоновый цвет */
+        color: #fff;  /* Цвет текста */
+        text-align: center;  /* Центрируем текст */
+        padding: 20px 10px;  /* Внутренние отступы */
+		margin-top: 150px;
+    }
+
+    .footer-content h3 {
+        margin: 0 0 10px;  /* Отступы между заголовком и текстом */
+        font-size: 13px;  /* Размер заголовка */
+        font-weight: 600;  /* Жирный заголовок */
+    }
+
+    .footer-content p {
+        margin: 5px 0;  /* Отступы между строками */
+        font-size: 10px;  /* Размер текста контактов */
+    }
+
+    .footer-bottom {
+        margin-top: 10px;  /* Отступ сверху для текста внизу */
+        font-size: 10px;  /* Размер текста копирайта */
+        opacity: 0.8;  /* Полупрозрачный текст */
+    }
+		
+
+		/* Мобильные стили */
+		@media (max-width: 1024px) {
+			.icons-content {
+				flex-direction: column; /* Устанавливаем вертикальное выравнивание */
+				margin: 0 20px; /* Убираем отступы по бокам */
+			}
+
+			.icon-section {
+				flex: 1 1 calc(100% - 20px); /* Каждая секция занимает 100% ширины, учитывая отступы */
+				max-width: 100%; /* Максимальная ширина 100% минус отступы */
+				margin: 10px 0; /* Устанавливаем одинаковый вертикальный отступ */
+				padding: 10px; /* Добавляем отступы внутри секций */
+				box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Добавляем тень для улучшения визуализации */
+				min-width: 250px;
+				background-size: cover;
+				width: 100%;
+			}			
+			.icon-section-content img {
+				width: 200px;
+			}
+
+
+			.icon img {
+				max-width: 80%; /* Ограничиваем максимальную ширину иконки до 80% */
+				height: auto; /* Сохраняем пропорции */
+			}
+
+			.icon-section {
+				background-size: cover; /* Обеспечиваем, чтобы фон заполнял всю секцию */
+				background-position: center; /* Центрируем фоновое изображение */
+			}	
+
+			.icon-section.icon-section-4 {
+				margin-bottom: 50px;
+			}
+
+			.main-section h1 {
+				font-size: 36px; /* Размер заголовка на мобильных устройствах */
+			}
+
+			.main-section p {
+				font-size: 16px; /* Размер текста на мобильных устройствах */
+			}	
+			.try-btn {
+				font-size: 14px;
+				font-weight: 400;
+			}					
+
+			.icon-section-text {
+			padding-top: 10px;
+			}
+			
+			.quote {
+				margin-top: 80px;
+				height:130px;
+			}
+			
+			.quote-text p {
+				font-size: 15px;
+			}
+			
+			.quote-text h1 {
+				font-size: 20px;
+			}
+			
+			.footer-content h3 {
+				margin: 0 0 10px;  /* Отступы между заголовком и текстом */
+				font-size: 12px;  /* Размер заголовка */
+				font-weight: 500;  /* Жирный заголовок */
+			}
+
+			.footer-content p {
+				margin: 5px 0;  /* Отступы между строками */
+				font-size: 10px;  /* Размер текста контактов */
+			}		
+			
+			.footer-bottom p{
+				font-size: 9px;  /* Размер текста копирайта */
+				}
+		}
+		
+		@media (max-width: 580px) {
+		
+			.main-section h1 {
+				font-size: 28px; /* Размер заголовка для очень узких экранов */
+			}
+
+			.main-section p {
+				font-size: 14px; /* Размер текста для очень узких экранов */
+				margin: 2px 0;
+			}
+			.try-btn {
+				font-size: 10px;
+				font-weight: 400;
+			}
+			.icon-section-content img {
+				width: 140px;
+			}
+			
+			.icon-section-content {
+				padding: 7px 7px 7px 7px
+			}
+			.icon-section-text h2 {
+				font-size: 13px;
+				margin: 6px 0 8px 0;
+			}
+			.icon-section-text h3 {
+				font-size: 11px;
+				margin: 3px 0 2px 0;
+				
+			}
+			.icon-section-text p{
+				font-size: 9px;
+			}
+			.icon-section-text {
+				padding-top: 0;
+			}
+			.quote {
+				margin-top: 50px;
+				height:70px;
+			}
+			.quote-text p {
+				font-size: 10px;
+			}
+			
+			.quote-text h1 {
+				font-size: 12px;
+			}
+			
+			.container {
+				padding-top: 35px;
+			}
+			
+			.main-section p {
+				font-size: 11px;
+				margin: 6px 20px;
+				}
+				
+			.main-section h1 {
+				font-size: 28px;
+				margin: 0 15px;
+			}	
+			
+			.icon-section {
+				margin: 5px 0;
+				border-radius: 20px;
+			}
+			
+		}
+		
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <a class="try-btn">Выбрать курс</a>
+        </div>
+    </header>
+
+    <section class="main-section">
+        <div class="container">
+            <div class="content">
+                <h1><span style="color: #296364;">Играй</span>, учись, <span style="color: #296364;">расти с нами!</span></h1>                
+                <p>Развивающие мини-курсы для детей дошкольного возраста, которые превратят обучение в захватывающее приключение для вашего ребёнка и всей семьи!</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="quote">
+		<div class="quote-text">
+			<h1><span style="color: #353535;">Сделайте шаг в развитии вашего ребёнка.</span></h1>
+			<p>каждый мини-курс рассчитан на 4 недели обучения</p>			
+		</div>
+	</section>
+    <section class="icons">
+		<div class="icons-content">
+		
+			<a href="newpage.html" style="text-decoration: none; color: inherit;">
+				<div class="icon-section icon-section-1">
+					<div class="icon-section-content">
+						<img src="pic/box1.png" width="300" alt="Иконка 1">
+						<div class="icon-section-text">
+							<div>
+								<h2>Кодим <span style="color: #ffbf09;">вместе!</span></h2> 
+								<h3>Цели мини-курса:</h3>
+								<p>• развить у ребенка логическое мышление;</p>
+								<p>• научить понимать последовательности;</p>
+								<p>• познакомить с технологиями;</p>							
+							</div>
+							
+						</div>
+					</div>
+				</div>
+			</a>
+
+			
+			<a href="newpage2.html" style="text-decoration: none; color: inherit;">
+				<div class="icon-section icon-section-2">
+					<div class="icon-section-content">
+						<img src="pic/box2.png" width="300" style="opacity:0.88" alt="Иконка 2">
+						<div class="icon-section-text">
+							<div>
+								<h2>Мир <span style="color: #ffbf09;">английского</span></h2>
+								<h3>Цель мини-курса:</h3>
+								<p>• развить базовые навыки понимания и разговора на английском языке.</p>
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</a>
+			
+			<a href="newpage3.html" style="text-decoration: none; color: inherit;">
+				<div class="icon-section icon-section-3">
+					<div class="icon-section-content">
+						<img src="pic/box3.png" width="300" style="opacity:0.88" alt="Иконка 3">
+						<div class="icon-section-text">
+							<div>
+								<h2>История <span style="color: #ffbf09;">в сказках</span></h2>
+								<h3>Цели мини-курса:</h3>
+								<p>• знакомство с основами мировой истории через сказки,</p>
+								<p>• развитие воображения, языковых навыков и критического мышления</p>
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</a>
+
+			<a href="newpage4.html" style="text-decoration: none; color: inherit;">
+
+				<div class="icon-section icon-section-4">
+					<div class="icon-section-content">
+						<img src="pic/box4.png" width="300" style="opacity:0.8" alt="Иконка 4">
+						<div class="icon-section-text">
+							<div>
+								<h2>Видим <span style="color: #ffbf09;">изнутри</span></h2>
+								<h3>Цели мини-курса:</h3>
+								<p>• научить детей распознавать свои эмоции;</p>
+								<p>• помочь детям понимать эмоции других людей;</p>
+								<p>• развить у детей навыки эмпатии.</p>
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</a>
+		</div>
+	</section>
+	 <script>
+        const button = document.querySelector('.try-btn');
+
+        button.addEventListener('click', () => {
+			document.querySelector('.icons').scrollIntoView({ behavior: 'smooth' });
+        });
+    </script>
+	<footer class="site-footer">
+		<div class="footer-content">
+			<h3>По всем вопросам</h3>
+			<p>Telegram: info@example</p>
+			<p>Email: info@example.com</p>
+		</div>
+		<div class="footer-bottom">
+			<p>© 2024 Все права защищены</p>
+		</div>
+	</footer>	
+</body>
+</html>
